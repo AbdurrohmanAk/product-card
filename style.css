@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   color: #515076;
-  background-image: url('img/back-wallpaper.png');
+  background-image: url('img/wallpaper-flowers.png');
   background-repeat: no-repeat; 
   background-position-x: 85px;
 }
@@ -29,7 +29,7 @@ body {
   margin-left: 25px;
 }
 
-.title-card {
+.title-product {
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -38,15 +38,15 @@ body {
   margin-left: 25px;
 }
 
-.text-card {
+.text-product {
   margin-left: 25px;
 }
 
-.option-card {
+.option-product {
   margin-left: 25px;
 }
 
-.list-composition-card {
+.list-composition-product {
   padding-left: 0;
   margin-left: 38px;
 }
