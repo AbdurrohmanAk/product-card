@@ -1,7 +1,5 @@
 body {
-  width: 1280px;
-  height: 1725px;
-  font-family: 'Montserrat','Arial', sans-serif;
+  font-family: 'Montserrat','Arial',sans-serif;
   font-size: 13px;
   margin: 0;
   padding: 0;
@@ -9,6 +7,11 @@ body {
   background-image: url('img/background-flowers.png');
   background-repeat: no-repeat; 
   background-position-x: 85px;
+}
+
+main {
+  width: 1280px;
+  height: 1725px;
 }
 
 .title-page {
@@ -19,7 +22,7 @@ body {
   margin-top: 220px;
 }
 
-.description-product { 
+.product-description { 
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
