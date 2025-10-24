@@ -1,22 +1,18 @@
 // Покраска первой карточки продукта //
 const firstProductCard = document.querySelector(".card-container");
 const changeColorCardButton = document.querySelector("#button_change_card");
-const yellowColor = "#e2dc84ff";
-const silverColor = "#5d6c6aff";
-const blueColor = "#4a90e2";
-const redColor = "#ff4c4c";
 
 changeColorCardButton.addEventListener("click", () => {
-  firstProductCard.style.backgroundColor = yellowColor;
+  firstProductCard.style.backgroundColor = "#e2dc84ff";
 });
 
 // Покраска всех карточек продукта //
 
-const ProductCards = document.querySelectorAll(".card-container");
+const productCards = document.querySelectorAll(".card-container");
 const buttonChangeColorCards = document.querySelector("#button_change_cards");
 
 buttonChangeColorCards.addEventListener("click", () => {
-  ProductCards.forEach((card) => (card.style.backgroundColor = silverColor));
+  productCards.forEach((card) => (card.style.backgroundColor = "#5d6c6aff"));
 });
 
 // Открыть Google //
@@ -40,14 +36,9 @@ titlePage.addEventListener("mouseenter", () => {
 });
 
 // Изменение цвета кнопки //
+
 const colorsButton = document.getElementById("colors-button");
-colorsButton.style.backgroundColor = blueColor;
-let isColored = false;
 colorsButton.addEventListener("click", () => {
-  if (isColored) {
-    colorsButton.style.backgroundColor = blueColor;
-  } else {
-    colorsButton.style.backgroundColor = redColor;
-  }
-  isColored = !isColored;
+colorsButton.classList.toggle("change_color");
 });
+
