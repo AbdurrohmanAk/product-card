@@ -97,3 +97,31 @@ main {
   align-items: flex-start;
   margin-top: 20px;
 }
+
+.color_button {
+ padding: 30px;
+ font-size: 20px;
+ font-weight: 600;
+ background-color: #042d5d;
+ color: white;
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ margin-left: 40px;
+}
+
+.change_color_button {
+ background-color: #4d0e08;
+ padding: 30px;
+ font-size: 20px;
+ font-weight: 600;
+ color: white;
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ margin-left: 40px;
+}
+
+.change_color {
+  background-color: #042d5d;
+}
