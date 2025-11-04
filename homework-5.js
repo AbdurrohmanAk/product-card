@@ -1,38 +1,37 @@
-// 3. Вывод прогноз погоды в консоль
+// 3. Вывод прогноза погоды в консоль
 
-function weatherForecast(city, temperature) {
-  console.log(`Сейчас в ${city} температура ${temperature}°C`);
-}
-weatherForecast("Дербент", +12);
-
-// 4.Сравнение скорости
-
-const soundSpeed = 343;
-
-function compareSpeed(speed) {
-  if (speed >= soundSpeed) {
-    console.log("Cверхзвуковая скорость");
-  } else {
-    console.log("Дозвуковая скорость");
+function showWeather (city, temperature) {
+  console.log(`Сейчас в городе ${city} температура ${temperature} градусов по Цельсию`)
   }
-}
-compareSpeed();
+  showWeather('Махачкала', 13)
 
-// 5. Определение бюджета для покупки
+  // 4. Сравнение скорости
 
-const productCoffee = "ColdBrew";
-const productPrice = 250;
-const buyCoffee = (budget) => {
+  const SPEED_OF_SOUND = 343; 
+  function compareSpeed(speed) {
+    if (speed > SPEED_OF_SOUND) {
+      console.log("Сверхзвуковая скорость")
+    } else {
+      console.log("Дозвуковая скорость")
+      }
+    }
+    compareSpeed(350);
 
-  if (budget >= productPrice) {
-    console.log(`приобретен ${productCoffee}`);
-  } else {
+// 5. Определение бюджета для покупки 
+
+  const productCoffee = "ColdBrew";
+  const productPrice = 250;
+  const buyCoffee = (budget) => {
+    if (budget >= productPrice) {
+      console.log(`приобретен ${productCoffee} Спасибо за покупку!`);
+    } else {
     console.log(`Вам не хватает ${productPrice - budget} средств пополните баланс`);
+    }
   }
-}
-buyCoffee(200);
+  buyCoffee(200);
+  buyCoffee(250);
 
-// 6. Создать и именовать функцию 
+  // 6. Создать и именовать функцию
 
 function showInfo() {
   console.log("It-simulator");
@@ -43,4 +42,4 @@ showInfo();
 
 const name = "Abdurrohman";
 const locationCity = "Dagestan, Derbent"; 
-const telegram = "@abdu_drnt";
+const telegram = "abdu_drnt";
