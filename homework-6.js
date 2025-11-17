@@ -118,10 +118,9 @@ console.log(books);
 
 function addProperty(booksarray) {
   return booksarray.map(book => ({ 
-    ...book,
-    isRare: book.year < 2000
+  ...book,
+  isRare: book.year < 2000
   }));
 }
-
 const newBooks = addProperty(books);
 console.log(newBooks);
