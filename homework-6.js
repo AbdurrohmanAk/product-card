@@ -26,15 +26,14 @@ console.log(car);
 
 // 5. Написать функцию которая аргументом будет принимать объект описанный в пунке 4...
 
-function setMaxSpeed (carObj, topSpeed) {
-  if (!carObj.hasOwnProperty('topSpeed'))  {
-    carObj.topSpeed = topSpeed;
-    console.log(`Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} установлена на ${topSpeed} км/ч.`);
-    }else{
-      console.log(`Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} уже установлена на ${carObj.topSpeed} км/ч.`);
+function setMaxSpeed(carObj, topSpeed) {
+  if (!carObj.hasOwnProperty('topSpeed')) {
+  carObj.topSpeed = topSpeed;
+  console.log(`Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} установлена на ${topSpeed} км/ч.`);
+  } else {
+  console.log(`Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} уже установлена на ${carObj.topSpeed} км/ч.`);
   }
 };
-
 setMaxSpeed(car, 180);
 setMaxSpeed(car, 200);
 console.log(car);
