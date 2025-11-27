@@ -1,5 +1,4 @@
 export const userComments = [
-  
   {
   postId: 1,
   id: 1,
@@ -70,4 +69,4 @@ export const userComments = [
   email: "Carmen_Keeling@caroline.name",
   body: "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis"
   }
-  ]
+]
