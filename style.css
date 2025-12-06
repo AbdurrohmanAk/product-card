@@ -90,7 +90,7 @@ main {
   color: #515076;
 }
 
-.card-image.background-item {
+.background-item {
   display: flex;
   flex-wrap: wrap;         
   justify-content: center; 
