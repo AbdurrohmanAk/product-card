@@ -10,7 +10,6 @@ const profile = {
   hobby: "Fishing",
   mail: "kkurbanov@gmail.com",
 };
-console.log(profile);
 
 // .4 Создать объект который будет хранить данные об автомобиле и добавить дополниетльное свойство...
 
@@ -22,7 +21,6 @@ const car = {
   mileage: 15000,
 };
 car.owner = profile;
-console.log(car);
 
 // 5. Написать функцию которая аргументом будет принимать объект описанный в пунке 4...
 
@@ -40,7 +38,6 @@ function setMaxSpeed(carObj, topSpeed) {
 }
 setMaxSpeed(car, 180);
 setMaxSpeed(car, 200);
-console.log(car);
 
 // 6. Написать функцию которая получает первым аргументом объект, а вторым аргументом свойство объекта...
 
@@ -97,7 +94,6 @@ library.push({
     genre: "Саморазвитие",
 });
 
-console.log(library);
 
 // 9. Создать еще массив книг и объединить с другим массивом
 
@@ -126,7 +122,6 @@ const fictionBooks = [
   },
 ];
 const books = [...library, ...fictionBooks];
-console.log(books);
 
 // 10. Создать функцию которая принимает массив сущностей
 
@@ -137,4 +132,3 @@ function addProperty(booksarray) {
   }));
 }
 const newBooks = addProperty(books);
-console.log(newBooks);

@@ -45,14 +45,14 @@ const productsByName = productList.reduce((acc, item) => {
 function showCards() {
   const count = prompt("Сколько карточек отобразить? От 1 до 5");
   const number = Number(count)
-  let showToCards;
+  let cardsToShow;
 
   if (number >= 1 && number <= 5) {
-    showToCards = number;
+    cardsToShow = number;
   } else {
     alert ("Некорректное значение, показываем 5 карточек.");
-    showToCards = 5
+    cardsToShow = 5
   }
-  createCards(productList.slice(0, showToCards));
+  createCards(productList.slice(0, cardsToShow));
 }
 showCards()
