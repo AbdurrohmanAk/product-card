@@ -1,4 +1,4 @@
-export const listProduct = [
+export const productList = [
   {
     image: "mousse", 
     description: "для нормальной кожи",

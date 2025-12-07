@@ -1,53 +1,62 @@
-import { listProduct } from "./list-product.js";
+import { productList } from "./product-list.js";
 
 // 3. Создать и реализовать шаблон продуктовых карточек 
 
-const productTempalte = document.getElementById('product-template');
+const productTemplate = document.getElementById('product-template');
 const cardList = document.getElementById('card-list');
 
-listProduct.forEach(product => {
-  const productClone = productTempalte.content.cloneNode(true)
-  productClone.querySelector('.card-image').src = `img/${product.image}.png`;
-  productClone.querySelector('.product-description').textContent = product.description ;
-  productClone.querySelector('.product-name').textContent = product.name;
-  productClone.querySelector('.text-product').textContent = product.text;
+function createCards(count) {
+  cardList.innerHTML = "";
+  productList.slice(0, count).forEach(product => {
+    const clone = productTemplate.content.cloneNode(true);
 
-  const compositionItems = productClone.querySelectorAll('.composition-item');
-  compositionItems.forEach((item, index) => {
-    item.textContent = product.composition[index]
+    clone.querySelector(".card-image").src = `img/${product.image}.png`;
+    clone.querySelector(".product-description").textContent = product.description;
+    clone.querySelector(".product-name").textContent = product.name;
+    clone.querySelector(".text-product").textContent = product.text;
+
+    const list = clone.querySelector(".list-option-product");
+    product.composition.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+    clone.querySelector(".price-value").textContent = product.price + " ₽";
+    cardList.appendChild(clone);
   });
+}
 
-  productClone.querySelector('.price-value').textContent = product.price + " Р";
-  cardList.appendChild(productClone);
-});
 
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
-const listProductString = listProduct.reduce((acc, item, index) => {
-  return acc + (index === 0 ? item.name: ";" + item.name);
-}, "");
-console.log(listProductString)
+const productListString = productList.reduce(
+  (acc, item,) => acc === ""? item.name : acc + ";" + item.name,
+ "")
 
 // 5.  Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
-const productsByName = listProduct.reduce((acc, item) => {
+const productsByName = productList.reduce((acc, item) => {
   acc[item.name] = item.description;
   return acc;
-},[])
-
+},{});
 
 // 6. Реализовать функцию, которая при старте нашей страницы выводит сообщение с текстом, мол "Сколько карточек отобразить? От 1 до 5"
 
-const showCards = () => {
-  const displayCard = prompt("Сколько карточек отобразить? От 1 до 5");
-  const numbers = Number(displayCard);
-if (displayCard === null) {
-  createCards(5);
-} else if (number >=1 && number <= 5) {
-  createCards(numbers);
-} else {
-  alert("Показать все карточки.");
-  createCards(5);
+function showCards() {
+  const value = prompt("Сколько карточек отобразить? От 1 до 5");
+
+  if (value === null) {
+    createCards(5);
+    return;
+  }
+
+  const number = Number(value);
+
+  if (number >= 1 && number <= 5) {
+    createCards(number);
+  } else {
+    alert("Показать все карточки.");
+    createCards(5);
+  }
 }
-}
-showCards()
+showCards();
