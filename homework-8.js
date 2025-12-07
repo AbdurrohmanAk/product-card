@@ -1,22 +1,22 @@
 import { productList } from "./product-list.js";
 
-// 3. Создать и реализовать шаблон продуктовых карточек 
+// 3. Создать и реализовать шаблон продуктовых карточек
 
-const productTemplate = document.getElementById('product-template');
-const cardList = document.getElementById('card-list');
+const productTemplate = document.getElementById("product-template");
+const cardList = document.getElementById("card-list");
 
-function createCards(count) {
+function createCards(product) {
   cardList.innerHTML = "";
-  productList.slice(0, count).forEach(product => {
+  productList.forEach((product) => {
     const clone = productTemplate.content.cloneNode(true);
 
     clone.querySelector(".card-image").src = `img/${product.image}.png`;
-    clone.querySelector(".product-description").textContent = product.description;
+    clone.querySelector(".product-description").textContent =product.description;
     clone.querySelector(".product-name").textContent = product.name;
     clone.querySelector(".text-product").textContent = product.text;
 
     const list = clone.querySelector(".list-option-product");
-    product.composition.forEach(item => {
+    product.composition.forEach((item) => {
       const li = document.createElement("li");
       li.textContent = item;
       list.appendChild(li);
@@ -26,32 +26,29 @@ function createCards(count) {
   });
 }
 
-
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
 const productListString = productList.reduce(
-  (acc, item,) => acc === ""? item.name : acc + ";" + item.name,
- "")
+  (acc, item) => (acc === "" ? item.name : acc + ";" + item.name),
+  ""
+);
 
 // 5.  Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
 const productsByName = productList.reduce((acc, item) => {
   acc[item.name] = item.description;
   return acc;
-},{});
+}, {});
 
 // 6. Реализовать функцию, которая при старте нашей страницы выводит сообщение с текстом, мол "Сколько карточек отобразить? От 1 до 5"
 
 function showCards() {
-  const value = prompt("Сколько карточек отобразить? От 1 до 5");
-
-  if (value === null) {
+  const count = prompt("Сколько карточек отобразить? От 1 до 5");
+  if (!count) {
     createCards(5);
     return;
   }
-
-  const number = Number(value);
-
+  const number = Number(count);
   if (number >= 1 && number <= 5) {
     createCards(number);
   } else {
