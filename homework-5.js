@@ -34,7 +34,6 @@ function showWeather (city, temperature) {
   // 6. Создать и именовать функцию
 
 function showInfo() {
-  console.log("It-simulator");
 }
 showInfo();
 
