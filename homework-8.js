@@ -5,9 +5,9 @@ import { productList } from "./product-list.js";
 const productTemplate = document.getElementById("product-template");
 const cardList = document.getElementById("card-list");
 
-function createCards(product) {
+function createCards(products) {
   cardList.innerHTML = "";
-  productList.forEach((product) => {
+  products.forEach((product) => {
     const clone = productTemplate.content.cloneNode(true);
 
     clone.querySelector(".card-image").src = `img/${product.image}.png`;
@@ -44,16 +44,15 @@ const productsByName = productList.reduce((acc, item) => {
 
 function showCards() {
   const count = prompt("Сколько карточек отобразить? От 1 до 5");
-  if (!count) {
-    createCards(5);
-    return;
-  }
-  const number = Number(count);
+  const number = Number(count)
+  let showToCards;
+
   if (number >= 1 && number <= 5) {
-    createCards(number);
+    showToCards = number;
   } else {
-    alert("Показать все карточки.");
-    createCards(5);
+    alert ("Некорректное значение, показываем 5 карточек.");
+    showToCards = 5
   }
+  createCards(productList.slice(0, showToCards));
 }
-showCards();
+showCards()
