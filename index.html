@@ -34,7 +34,89 @@
     </li>
   </template>
   </ul>
+  <button id="openModal" class="btnRegistration">Регистрация</button>
+  <div class="overlay" id="overlayModal">
+    <div class="modalHome" id="modal">
+      <button class="modalOff" id="closeModalBtn">X</button>
+      <h2 class="registration-text">Регистрация</h2>
+    <form id="registerForm">
+        <label>
+        Имя
+        <input type="text"
+        name="firstName"
+        placeholder="Введите имя"
+        required>
+      </label>
+      <label>
+        Фамилия
+        <input type="text"
+        name="lastName"
+        placeholder="Введите фамилию"
+        required>
+      </label>
+      <label>
+        Дата Рождения
+        <input type="date"
+        name="birthDate"
+        required>
+      </label>
+      <label>
+        Логин
+        <input type="text"
+        name="login"
+        placeholder="Введите логин"
+        required>
+      </label>
+      <label>
+        Пароль
+        <input type="password"
+        name="password"
+        placeholder="Введите пароль"
+        required>
+      </label>
+      <label>
+        Повторите пароль
+        <input type="password"
+        name="repeatPassword"
+        placeholder="Повторите пароль"
+        required>
+      </label>
+    <button type="submit">Зарегистрироваться</button>
+    </form>
+    </div>
+  </div>
+  <footer class="mockupFooter">
+    <div class="bar-footer">
+      <div class="title-footer">
+        <span class="name-footer">Product Cards</span>
+        <span class="name-best-product">У нас самые лучшие продукты для кожи!</span>
+        <div class="img-footer">
+          <img src="/img/Vector.png" alt="Телеграмм">
+          <img src="/img/Vector (1).png" alt="ВК" class="vector-img">
+        </div>
+      </div>
+      <div class="footer-email">
+          <div class="subscribe-text">
+          <p>Подпишись на наши акции:</p>
+        </div>
+        <div class="email-box">
+          <form id="footerForm">
+          <input name="email" type="email" id="footerEmail" placeholder="Введи Email... " class="footer-input">
+          <button class="subscribe-btn" type="submit" >Подписаться</button>
+        </form>
+        </div>
+      </div>
+      <div class="right-footer">
+        <span>Быстрые ссылки</span>
+        <nav class="right-home">Главная</nav>
+        <nav>Магазин</nav>
+        <nav>Контакты</nav>
+      </div>
+    </div>
+    <div class="footer-url">www.product-cards.com©all right reserve</div>
+  </footer>
   </main>
+  <script type="module" src="homework-9.js"></script>
   <script type="module" src="homework-8.js"></script>
 </body>
 </html>
