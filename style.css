@@ -126,7 +126,7 @@ main {
   background-color: #042d5d;
 }
 
-.mockupFooter {
+.mockup-footer {
   width: 1728px;
   min-height: 477px;
   box-sizing: border-box;
@@ -168,7 +168,7 @@ main {
   padding-bottom: 42px;
 }
 
-.vector-img {
+.vk-picture {
   margin-left: 30px;
 }
 
@@ -264,7 +264,7 @@ main {
   margin-bottom: 20px;
 }
 
-.footer-url{
+.footer-url {
   color: #FFFFFF;
   opacity: 0.5;
   text-align: center;
@@ -288,7 +288,7 @@ main {
   display: flex;
 }
 
-.modalHome {
+.modal-home {
   background: #FFFFFF;
   padding: 24px;
   width: 450px;
@@ -298,12 +298,12 @@ main {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 } 
 
-.modalHome h2 {
+.modal-home h2 {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.modalOff {
+.modal-off {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -313,7 +313,7 @@ main {
   cursor: pointer;
 }
 
-.btnRegistration {
+.btn-registration {
   box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 1);
   transition: 0.5s;
   border: none;
@@ -324,25 +324,25 @@ main {
   color: white;
 }
 
-.btnRegistration:hover{
+.btn-registration:hover{
   transform: translate(0,-3px);
   box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
 }
 
-#registerForm {
+.form-modal {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-#registerForm label {
+.form-modal label {
   display: flex;
   flex-direction: column;
   font-size: 14px;
   gap: 6px;
 }
 
-#registerForm input {
+.form-modal input {
   padding: 8px 10px;
   font-size: 14px;
   border-radius: 6px;
@@ -350,19 +350,19 @@ main {
   outline: none;
 }
 
-#registerForm input:invalid {
+.form-modal input:invalid {
   border-color: darkred;
 }
 
-#registerForm input:valid {
+.form-modal input:valid {
   border-color: #4caf50;
 }
 
-#registerForm:focus {
+.form-modal:focus {
   border-color: #1042a0;
 }
 
-#registerForm button {
+.form-modal button {
   margin-top: 10px;
   padding: 10px ;
   border: none;
@@ -373,7 +373,7 @@ main {
   box-shadow: 0 5px 0 #003CC5;
 }
 
-#registerForm button:hover {
+.form-modal button:hover {
   background: #003CC5;
   box-shadow: none;
   position: relative;
