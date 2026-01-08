@@ -42,3 +42,30 @@ colorsButton.addEventListener("click", () => {
 colorsButton.classList.toggle("change_color");
 });
 
+import './comments.js';
+import './product-list.js';
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import  {Form} from './Form.js';
+import  {Modal} from './modal.js';
+
+const modal = new Modal("modal");
+const registerForm = new Form('registerForm');
+
+document.getElementById('openModal').addEventListener('click', ()=> {
+  modal.open();
+})
+
+registerForm.form.addEventListener('submit', (Event) => {
+  Event.preventDefault();
+  if (registerForm.isValid()) {
+    console.log(registerForm.getValues());
+    registerForm.reset();
+    modal.close()
+    }else {
+      alert('Заполните форму корректно');
+  }
+});
