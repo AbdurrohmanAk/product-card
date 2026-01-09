@@ -284,7 +284,7 @@ main {
   z-index: 1000;
 }
 
-.overlay.modal-showed {
+.overlay--visible {
   display: flex;
 }
 
@@ -296,7 +296,14 @@ main {
   border-radius: 12px;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
 } 
+
+.modal--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 .modal-home h2 {
   margin-bottom: 20px;
