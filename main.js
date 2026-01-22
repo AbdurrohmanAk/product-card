@@ -2,7 +2,7 @@
 const firstProductCard = document.querySelector(".card-container");
 const changeColorCardButton = document.querySelector("#button_change_card");
 changeColorCardButton.addEventListener("click", () => {
-firstProductCard.style.backgroundColor = "#e2dc84ff";
+  firstProductCard.style.backgroundColor = "#e2dc84ff";
 });
 
 // Покраска всех карточек продукта //
@@ -10,7 +10,7 @@ firstProductCard.style.backgroundColor = "#e2dc84ff";
 const productCards = document.querySelectorAll(".card-container");
 const buttonChangeColorCards = document.querySelector("#button_change_cards");
 buttonChangeColorCards.addEventListener("click", () => {
-productCards.forEach((card) => (card.style.backgroundColor = "#5d6c6aff"));
+  productCards.forEach((card) => (card.style.backgroundColor = "#5d6c6aff"));
 });
 
 // Открыть Google //
@@ -18,7 +18,7 @@ productCards.forEach((card) => (card.style.backgroundColor = "#5d6c6aff"));
 const openGoogleButton = document.querySelector("#button_open_google");
 openGoogleButton.addEventListener("click", openGoogle);
 function openGoogle() {
-const answer = confirm("Вы хотите открыть Google?");
+  const answer = confirm("Вы хотите открыть Google?");
   if (answer === true) {
     window.open("https://www.google.com");
   } else {
@@ -37,16 +37,16 @@ titlePage.addEventListener("mouseenter", () => {
 
 const colorsButton = document.getElementById("colors-button");
 colorsButton.addEventListener("click", () => {
-colorsButton.classList.toggle("change_color");
+  colorsButton.classList.toggle("change_color");
 });
 
-import './comments.js';
-import './product-list.js';
-import './homework-5.js';
-import './homework-6.js';
-import './homework-7.js';
-import './homework-8.js';
-import './homework-9.js';
+import "./comments.js";
+import "./product-list.js";
+import "./homework-5.js";
+import "./homework-6.js";
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
 import { Modal } from "./modal.js";
 import { Form } from "./Form.js";
 
@@ -56,12 +56,12 @@ document.getElementById("openModal").addEventListener("click", () => {
 modal.open();
 });
 registerForm.form.addEventListener("submit", (event) => {
-  event.preventDefault();
-if (registerForm.isValid()) {
-  console.log(registerForm.getValues());
-  registerForm.reset();
-  modal.close();
-} else {
-  alert("Заполните форму корректно");
-}
+event.preventDefault();
+  if (registerForm.isValid()) {
+    console.log(registerForm.getValues());
+    registerForm.reset();
+    modal.close();
+  } else {
+    alert("Заполните форму корректно");
+  }
 });
