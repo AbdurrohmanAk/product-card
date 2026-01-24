@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
 </head>
+
 <body>
   <main>
     <h1 class="title-page title-site">Выбери свой продукт</h1>
@@ -18,105 +20,88 @@
     <button id="button_change_cards" class="color_button">Сменить цвет всех карточек</button>
     <button id="button_open_google" class="color_button">Открыть Google</button>
     <button id="colors-button" class="change_color_button">Цвет кнопки</button>
-  <ul id="card-list"  class="background-item">
-    <template id="product-template">
-      <li class="card-container">
-      <img class="card-image" src="" alt="" width="290" height="245" />      
-      <span class="product-description"></span>
-      <h2 class="product-name"></h2>
-      <p class="text-product"></p>
-      <span class="composition-product">Состав:</span>
-      <ul class="list-option-product"></ul>
-      <ul class="price-label">
-        <span class="price">Цена</span>
-        <span class="price-value"></span>
-      </ul>
-    </li>
-  </template>
-  </ul>
-  <button id="openModal" class="btn-registration">Регистрация</button>
-  <div class="overlay" id="overlayModal">
-    <div class="modal-home" id="modal">
-      <button class="modal-off" id="closeModalBtn">X</button>
-      <h2 class="registration-text">Регистрация</h2>
-    <form id="registerForm" class="form-modal">
-        <label>
-        Имя
-        <input type="text"
-        name="firstName"
-        placeholder="Введите имя"
-        required>
-      </label>
-      <label>
-        Фамилия
-        <input type="text"
-        name="lastName"
-        placeholder="Введите фамилию"
-        required>
-      </label>
-      <label>
-        Дата Рождения
-        <input type="date"
-        name="birthDate"
-        required>
-      </label>
-      <label>
-        Логин
-        <input type="text"
-        name="login"
-        placeholder="Введите логин"
-        required>
-      </label>
-      <label>
-        Пароль
-        <input type="password"
-        name="password"
-        placeholder="Введите пароль"
-        required>
-      </label>
-      <label>
-        Повторите пароль
-        <input type="password"
-        name="repeatPassword"
-        placeholder="Повторите пароль"
-        required>
-      </label>
-    <button type="submit">Зарегистрироваться</button>
-    </form>
-    </div>
-  </div>
-  <footer class="mockup-footer">
-    <div class="bar-footer">
-      <div class="title-footer">
-        <span class="name-footer">Product Cards</span>
-        <span class="name-best-product">У нас самые лучшие продукты для кожи!</span>
-        <div class="footer-icon">
-          <img src="img/telegram.svg" alt="Телеграм">
-          <img src="img/vk.svg" alt="ВК" class="vk-picture">
-        </div>
-      </div>
-      <div class="footer-email">
-          <div class="subscribe-text">
-          <p>Подпишись на наши акции:</p>
-        </div>
-        <div class="email-box">
-          <form id="footerForm">
-          <input name="email" type="email" id="footerEmail" placeholder="Введи Email... " class="footer-input">
-          <button class="subscribe-btn" type="submit" >Подписаться</button>
+    <ul id="card-list" class="background-item">
+      <template id="product-template">
+        <li class="card-container">
+          <img class="card-image" src="" alt="" width="290" height="245" />
+          <span class="product-description"></span>
+          <h2 class="product-name"></h2>
+          <p class="text-product"></p>
+          <span class="composition-product">Состав:</span>
+          <ul class="list-option-product"></ul>
+          <ul class="price-label">
+            <span class="price">Цена</span>
+            <span class="price-value"></span>
+          </ul>
+        </li>
+      </template>
+    </ul>
+    <button id="openModal" class="btn-registration">Регистрация</button>
+    <div class="overlay" id="overlayModal">
+      <div class="modal-home" id="modal">
+        <button class="modal-off" id="closeModalBtn">X</button>
+        <h2 class="registration-text">Регистрация</h2>
+        <form id="registerForm" class="form-modal">
+          <label>
+            Имя
+            <input type="text" name="firstName" placeholder="Введите имя" required>
+          </label>
+          <label>
+            Фамилия
+            <input type="text" name="lastName" placeholder="Введите фамилию" required>
+          </label>
+          <label>
+            Дата Рождения
+            <input type="date" name="birthDate" required>
+          </label>
+          <label>
+            Логин
+            <input type="text" name="login" placeholder="Введите логин" required>
+          </label>
+          <label>
+            Пароль
+            <input type="password" name="password" placeholder="Введите пароль" required>
+          </label>
+          <label>
+            Повторите пароль
+            <input type="password" name="repeatPassword" placeholder="Повторите пароль" required>
+          </label>
+          <button type="submit">Зарегистрироваться</button>
         </form>
-        </div>
-      </div>
-      <div class="right-footer">
-        <span>Быстрые ссылки</span>
-        <nav class="right-home">Главная</nav>
-        <nav>Магазин</nav>
-        <nav>Контакты</nav>
       </div>
     </div>
-    <div class="footer-url">www.product-cards.com©all right reserve</div>
-  </footer>
+    <footer class="mockup-footer">
+      <div class="bar-footer">
+        <div class="title-footer">
+          <span class="name-footer">Product Cards</span>
+          <span class="name-best-product">У нас самые лучшие продукты для кожи!</span>
+          <div class="footer-icon">
+            <img src="img/telegram.svg" alt="Телеграм">
+            <img src="img/vk.svg" alt="ВК" class="vk-picture">
+          </div>
+        </div>
+        <div class="footer-email">
+          <div class="subscribe-text">
+            <p>Подпишись на наши акции:</p>
+          </div>
+          <div class="email-box">
+            <form id="footerForm">
+              <input name="email" type="email" id="footerEmail" placeholder="Введи Email... " class="footer-input">
+              <button class="subscribe-btn" type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
+        <div class="right-footer">
+          <span>Быстрые ссылки</span>
+          <nav class="right-home">Главная</nav>
+          <nav>Магазин</nav>
+          <nav>Контакты</nav>
+        </div>
+      </div>
+      <div class="footer-url">www.product-cards.com©all right reserve</div>
+    </footer>
   </main>
-  <script type="module" src="homework-9.js"></script>
-  <script type="module" src="homework-8.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
+
 </html>

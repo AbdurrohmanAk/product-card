@@ -1,7 +1,6 @@
 // Покраска первой карточки продукта //
 const firstProductCard = document.querySelector(".card-container");
 const changeColorCardButton = document.querySelector("#button_change_card");
-
 changeColorCardButton.addEventListener("click", () => {
   firstProductCard.style.backgroundColor = "#e2dc84ff";
 });
@@ -10,7 +9,6 @@ changeColorCardButton.addEventListener("click", () => {
 
 const productCards = document.querySelectorAll(".card-container");
 const buttonChangeColorCards = document.querySelector("#button_change_cards");
-
 buttonChangeColorCards.addEventListener("click", () => {
   productCards.forEach((card) => (card.style.backgroundColor = "#5d6c6aff"));
 });
@@ -39,6 +37,31 @@ titlePage.addEventListener("mouseenter", () => {
 
 const colorsButton = document.getElementById("colors-button");
 colorsButton.addEventListener("click", () => {
-colorsButton.classList.toggle("change_color");
+  colorsButton.classList.toggle("change_color");
 });
 
+import "./comments.js";
+import "./product-list.js";
+import "./homework-5.js";
+import "./homework-6.js";
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
+import { Modal } from "./modal.js";
+import { Form } from "./Form.js";
+
+const modal = new Modal("overlayModal");
+const registerForm = new Form("registerForm");
+document.getElementById("openModal").addEventListener("click", () => {
+modal.open();
+});
+registerForm.form.addEventListener("submit", (event) => {
+event.preventDefault();
+  if (registerForm.isValid()) {
+    console.log(registerForm.getValues());
+    registerForm.reset();
+    modal.close();
+  } else {
+    alert("Заполните форму корректно");
+  }
+});
