@@ -12,7 +12,16 @@ class Drink {
   #temperature;
 
   getInfo() {
+    return `Напиток: ${this.name}, размер: ${this.size}, цена: ${this.price}Р`;
+  }
+
+  getInfo() {
     return this.#temperature;
+  }
+
+    serve() {
+    this.prepare();
+    console.log(`Напиток "${this.name}" подан клиенту`);
   }
 
   setTemperature(temp) {
@@ -20,20 +29,10 @@ class Drink {
     console.log(`Температура напитка  "${this.name}" установлена: ${temp} C`);
   }
 
-  #prepare() {
+  prepare() {
     console.log(`Готовим напиток "${this.name}"`);
     this.setTemperature(this.defaultTemperature())
   }
-
-  serve() {
-    this.#prepare();
-    console.log(`Напиток "${this.name}" подан клиенту`);
-  }
-
-  defaultTemperature() {
-    throw new Error("Метод default должен быть реализован в наследнике");
-  }
-
 }
 
 class Coffe extends Drink {
