@@ -65,3 +65,23 @@ event.preventDefault();
     alert("Заполните форму корректно");
   }
 });
+
+import Cafe from "./Cafe.js";
+import Coffee from "./Coffee.js";
+import Tea from "./Tea.js";
+import Lemonade from "./Lemonade.js";
+import Morse from "./Morse.js";
+
+const cafe = new Cafe("andCoffee", "ул. Гагарина, 12");
+console.log(cafe.getInfo());
+console.log("---------------------------------------");
+
+const coffee = new Coffee("Большой", 250, "Arabica", "Коровье");
+const tea = new Tea("Маленький", 150, "Чёрный");
+const lemonade = new Lemonade("Средний", 100, "Груша");
+const morse = new Morse("Большой", 200, "Смородина");
+
+cafe.orderDrink(coffee);
+cafe.orderDrink(tea);
+cafe.orderDrink(lemonade);
+cafe.orderDrink(morse);
