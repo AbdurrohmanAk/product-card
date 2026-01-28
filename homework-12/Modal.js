@@ -32,10 +32,6 @@ export class Modal {
     this.close();
   }
 
-  handleOverlayClick() {
-    this.handleClose();
-  }
-
   #initOpen(buttonId) {
     const button = document.getElementById(buttonId);
     button.addEventListener('click', () => {
