@@ -9,10 +9,10 @@ class Cafe {
   }
 
   orderDrink(drink) {
-    console.log(`Заказ принят в кафе "${this.name}"`);
-    console.log(drink.getInfo());
+  (`Заказ принят в кафе "${this.name}"`);
+  (drink.getInfo());
     drink.serve();
-    console.log("--------------------------------------");
+  ("--------------------------------------");
   }
 }
 

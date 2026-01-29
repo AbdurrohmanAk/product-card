@@ -1,7 +1,7 @@
 // 3. Вывод прогноза погоды в консоль
 
 function showWeather (city, temperature) {
-  console.log(`Сейчас в городе ${city} температура ${temperature} градусов по Цельсию`)
+  (`Сейчас в городе ${city} температура ${temperature} градусов по Цельсию`)
   }
   showWeather('Махачкала', 13)
 
@@ -10,9 +10,9 @@ function showWeather (city, temperature) {
   const SPEED_OF_SOUND = 343; 
   function compareSpeed(speed) {
     if (speed > SPEED_OF_SOUND) {
-      console.log("Сверхзвуковая скорость")
+      ("Сверхзвуковая скорость")
     } else {
-      console.log("Дозвуковая скорость")
+      ("Дозвуковая скорость")
       }
     }
     compareSpeed(350);
@@ -23,9 +23,9 @@ function showWeather (city, temperature) {
   const productPrice = 250;
   const buyCoffee = (budget) => {
     if (budget >= productPrice) {
-      console.log(`приобретен ${productCoffee} Спасибо за покупку!`);
+      (`приобретен ${productCoffee} Спасибо за покупку!`);
     } else {
-    console.log(`Вам не хватает ${productPrice - budget} средств пополните баланс`);
+    (`Вам не хватает ${productPrice - budget} средств пополните баланс`);
     }
   }
   buyCoffee(200);

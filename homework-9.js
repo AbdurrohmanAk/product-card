@@ -9,5 +9,5 @@ footerForm.addEventListener("submit", (event) => {
   }
   const formData = new FormData(footerForm);
   const data = Object.fromEntries(formData.entries());
-  console.log(data);
+  (data);
 });

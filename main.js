@@ -30,7 +30,7 @@ function openGoogle() {
 
 const titlePage = document.querySelector("h1");
 titlePage.addEventListener("mouseenter", () => {
-  console.log("Навели на заголовок");
+  ("Навели на заголовок");
 });
 
 // Изменение цвета кнопки //
@@ -49,6 +49,7 @@ import "./homework-8.js";
 import "./homework-9.js";
 import { Modal } from "./modal.js";
 import { Form } from "./Form.js";
+import "./test.js";
 
 const modal = new Modal("overlayModal");
 const registerForm = new Form("registerForm");
@@ -58,7 +59,7 @@ modal.open();
 registerForm.form.addEventListener("submit", (event) => {
 event.preventDefault();
   if (registerForm.isValid()) {
-    console.log(registerForm.getValues());
+    (registerForm.getValues());
     registerForm.reset();
     modal.close();
   } else {
@@ -73,8 +74,8 @@ import Lemonade from "./Lemonade.js";
 import Morse from "./Morse.js";
 
 const cafe = new Cafe("andCoffee", "ул. Гагарина, 12");
-console.log(cafe.getInfo());
-console.log("---------------------------------------");
+(cafe.getInfo());
+("---------------------------------------");
 
 const coffee = new Coffee("Большой", 250, "Arabica", "Коровье");
 const tea = new Tea("Маленький", 150, "Чёрный");

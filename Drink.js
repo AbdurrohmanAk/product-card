@@ -21,17 +21,17 @@ class Drink {
 
   setTemperature(temp) {
     this.#temperature = temp;
-    console.log(`Температура напитка "${this.name}" установлена: ${temp}°C`);
+  (`Температура напитка "${this.name}" установлена: ${temp}°C`);
   }
 
   prepare() {
-    console.log(`Готовим напиток "${this.name}"`);
+    (`Готовим напиток "${this.name}"`);
     this.setTemperature(this.defaultTemperature());
   }
 
   serve() {
     this.prepare();
-    console.log(`Напиток "${this.name}" подан клиенту`);
+    (`Напиток "${this.name}" подан клиенту`);
   }
 
   defaultTemperature() {

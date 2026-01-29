@@ -5,6 +5,6 @@ export class Vehicle {
     this.maxSpeed = maxSpeed;
   }
   move() {
-    console.log(`${this}едет со скоростью ${maxSpeed} км/ч`);
+  (`${this}едет со скоростью ${maxSpeed} км/ч`);
   }
 }
