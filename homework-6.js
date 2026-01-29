@@ -27,11 +27,11 @@ car.owner = profile;
 function setMaxSpeed(carObj, topSpeed) {
   if (!carObj.hasOwnProperty("topSpeed")) {
     carObj.topSpeed = topSpeed;
-    console.log(
+    (
       `Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} установлена на ${topSpeed} км/ч.`
     );
   } else {
-    console.log(
+    (
       `Максимальная скорость автомобиля ${carObj.brand} ${carObj.model} уже установлена на ${carObj.topSpeed} км/ч.`
     );
   }
@@ -42,7 +42,7 @@ setMaxSpeed(car, 200);
 // 6. Написать функцию которая получает первым аргументом объект, а вторым аргументом свойство объекта...
 
 function printCarInfo(carObj, property) {
-  console.log(carObj[property]);
+(carObj[property]);
 }
 printCarInfo(car, "brand");
 
