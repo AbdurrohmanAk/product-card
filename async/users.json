@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ivan",
+      "surname": "Ivanov",
+      "age": 25,
+      "email": "ivan@mail.ru"
+    },
+    {
+      "id": 2,
+      "name": "Anna",
+      "surname": "Petrovna",
+      "age": 30,
+      "email": "anna@mail.ru"
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "surname": "Wick",
+      "age": 40,
+      "email": "Continental@mail.ru"
+    }
+  ]
+}
