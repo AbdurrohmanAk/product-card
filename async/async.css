@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  font-size: 30px;
+  text-shadow:  -1px -1px #000, 0 1px 0 #444;
+  color: #222;
+  transition: all 1s;
+}
+
+#message:hover {
+  text-shadow:-1px -1px #000, 0 1px 0 #444;
+  color: #1A1A1A;
+}
+
+.buttons {
+  margin-bottom: 20px;
+
+}
+
+button {
+  margin: 5px;
+  padding: 20px 20px;
+  border: 1px;
+  color: salmon;
+  background-color: blanchedalmond;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  width: 220px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
